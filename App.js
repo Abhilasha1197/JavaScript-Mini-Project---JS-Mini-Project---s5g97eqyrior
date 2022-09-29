@@ -24,10 +24,7 @@ for(item of buttons){
                 screen.value = screenValue.toString().slice(0 ,-1);
            }
         }
-        
-
-        
-        else {
+       else {
             screenValue += buttonText ;
             screen.value = screenValue ;
         }
