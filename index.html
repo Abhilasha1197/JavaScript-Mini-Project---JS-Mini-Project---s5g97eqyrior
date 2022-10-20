@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link href="style.css" rel="stylesheet">
     <link href = "styles.css" rel="stylesheet">
-
-    <title>CALCULATOR</title>
 </head>
 <body>
+    <main class="background">
+        <section class="title">
+            <h1>Tic Tac Toe</h1>
+        </section>
+        <section class="display">
+            Player <span class="display-player playerX">X</span>`s turn
+        </section>
+        <section class="container">
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            <div class="tile"></div>
+            
+        </section>
+        <section class="display announcer hide"></section>
+            <section class="controls">
+            <div id="reset">Reset</div>
+            </section>
+    </main>
 
-    <div class = "container">
+  
         <div class = "calculator">
+            <div>
         <input type ="text" name="screen"  placeholder = "0" id = 'screen'>
+        <div>
             <table>
                     <tr>
                         <td><button>(</button></td>
                         <td><button>)</button></td>
                         <td><button>C</button></td>
-                        <td><button >⌫</button></td>
+                        <td><button>⌫</button></td>
                     </tr>
                        
                     <tr>
@@ -47,7 +73,8 @@
                     </tr>
             </table>
         </div>
-    </div>
-    <script src="calc.js"></script>
+    
+    <script src="App.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
