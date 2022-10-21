@@ -19,6 +19,7 @@ for(item of buttons){
         } 
         else if(buttonText == '⌫'){ 
            screen.value = screenValue.substr(0,screen.value.length-1); 
+            return;
            } 
          
          else { 
