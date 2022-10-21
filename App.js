@@ -1,30 +1,35 @@
-let screen = document.getElementById('screen'); 
-buttons = document.querySelectorAll('button'); 
-let screenValue = '' ; 
-for(item of buttons){ 
-    item.addEventListener('click', (e) =>{ 
-        buttonText = e.target.innerText; 
-       console.log('Button text is', buttonText); 
-        if(buttonText == '*') { 
-            buttonText = '*' ; 
-            screenValue += buttonText ; 
-            screen.value = screenValue ; 
-        } 
-        else if(buttonText == 'C'){ 
-            screenValue = "" ;  
-            screen.value = screenValue ; 
-        } 
-        else if(buttonText == '='){ 
-            screen.value = eval(screenValue) ; 
-        } 
-        else if(buttonText == '⌫'){ 
-           screen.value = screenValue.substr(0,screen.value.length-1); 
-            return;
-           } 
-         
-         else { 
-            screenValue += buttonText ; 
-            screen.value = screenValue ; 
-        } 
-    }) 
+const output = document.querySelector(".output") ;
+const result = document.querySelector(".result");
+const keys = document.querySelectorAll("button");
+
+//eventListener
+keys.forEach( key =>{
+    key.addEventListener("click" ,calculate);
+});
+
+function calculate(){
+    let buttonText = this.innerText;
+    if(buttonText=="C"){
+        output.innerText = "";
+        result.innerText= "0" ;
+        result.stylr.animation = "";
+        output.style.animation = "" ;
+        return;
+    }
+
+    if(buttonText === 'DEL'){
+        output.textContent = output.textContent.substr(0,output.textContent.length-1);
+        return;
+    }
+    if (buttonText === "="){
+        result.innerText = eval(output.innerText);
+        result.style.animation = "big 0.5s ease-in-out" ;
+        output.style.animationFillMode = "forwards" ;
+        output.style.animationFillMode = "forwards" ;
+    }
+
+    else{
+        output.textContent += buttonText;
+        return;
+    }
 }
