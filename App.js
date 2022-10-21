@@ -18,7 +18,7 @@ for(item of buttons){
             screen.value = eval(screenValue) ; 
         } 
         else if(buttonText == '⌫'){ 
-           screen.value = screenValue.slice(0,-1); 
+           screen.value = screenValue.substr(0,screen.value.length-1); 
            } 
          
          else { 
