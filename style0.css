@@ -1,1 +1,25 @@
+body{
+ width: 100vw;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: black;
+ 
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: brown;
+    width: 400px;
+    height: 400px;
+    border: 2px solid deeppink;
+}
+.item{
+    margin: 5px;
+    
+}
+
 
